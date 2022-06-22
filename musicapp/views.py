@@ -165,14 +165,12 @@ def all_songs(request):
         first_time = True
         last_played_song = Song.objects.get(id=7)
 
-    
     # apply search filters
     qs_singers = Song.objects.values_list('singer').all()
     s_list = [s.split(',') for singer in qs_singers for s in singer]
     all_singers = sorted(list(set([s.strip() for singer in s_list for s in singer])))
     qs_languages = Song.objects.values_list('language').all()
     all_languages = sorted(list(set([l.strip() for lang in qs_languages for l in lang])))
-    
     if len(request.GET) > 0:
         search_query = request.GET.get('q')
         search_singer = request.GET.get('singers') or ''

@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="/media/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %} {% endblock title %}</title>
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"> 
     
     <link href="{% static 'musicapp/css/musicplayer.css' %}" rel="stylesheet">
+
+    
     <style>
         .navbar
         {
@@ -134,10 +136,10 @@
     
 </head>
 <body class="bg-light">
-    <nav class="navbar navbar-expand-md navbar-primary bg-primary">
+    <nav class="navbar navbar-expand-md navbar-primary bg-dark">
         <div class="container">
             <h1><a href="{% url 'index' %}" class="navbar-brand">
-            <strong style="color:white">GALVANIC</strong></a></h1>
+            <strong style="color:white">M('essi','usic')</strong></a></h1>
             <div class="collapse navbar-collapse">
                 <a href="{% url 'index' %}" class="btn btn-outline-light mt-2 mx-1">HOME</a>
                 <a href="{% url 'all_songs' %}" class="btn btn-outline-light mt-2 mx-1">ALL SONGS</a>
