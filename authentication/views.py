@@ -5,12 +5,15 @@ from .forms import UserLoginForm, RegistrationForm
 
 # Create your views here.
 def login_request(request):
+    if request.user.is_authenticated:
+        return redirect('index')
     title = "Login"
     form = UserLoginForm(request.POST or None)
     context = {
         'form': form,
         'title': title,
     }
+
     if form.is_valid():
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password')
